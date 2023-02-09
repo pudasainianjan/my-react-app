@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 // class App extends React.Component {
 //   constructor(props) {
 //     super(props);
@@ -29,6 +29,22 @@ import React from "react";
 // }
 
 function App() {
+  useEffect(() => {
+    console.log("hello world!");
+    fetch(
+      "https://newsdata.io/api/1/news?apikey=pub_1686992b8861988240c0a599470eec9a466ff"
+    )
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   return <h1>hello world</h1>;
 }
 
