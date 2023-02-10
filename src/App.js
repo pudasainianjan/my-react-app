@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 // class App extends React.Component {
 //   constructor(props) {
 //     super(props);
@@ -21,15 +21,29 @@ import React from "react";
 //   render() {
 //     return (
 //       <div>
-//         <h1>Hello, world!</h1>
-//         <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+//         {/* <h1>Hello, world!</h1> */}
+//         <h2>It is {this.state.date.toLocaleTimeString()}</h2>
 //       </div>
 //     );
 //   }
 // }
 
 function App() {
-  return <h1>hello world</h1>;
+  const [date, setDate] = useState(new Date());
+
+  useEffect(() => {
+    console.log("this component is updated");
+  });
+  useEffect(() => {
+    const timerID = setInterval(() => setDate(new Date()), 1000);
+  }, []);
+  useEffect(() => {}, [date]);
+  return (
+    <div>
+      {/* <h1>Hello, world!</h1> */}
+      <h2>It is {date.toLocaleTimeString()}</h2>
+    </div>
+  );
 }
 
 export default App;
