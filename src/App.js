@@ -1,35 +1,37 @@
-import React from "react";
-// class App extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = { date: new Date() };
-//   }
+import { notification } from "antd";
+import { useEffect, useState } from "react";
+import SearchComponent from "./components/SearchComponent";
 
-//   componentDidMount() {
-//     console.log("this component mounted");
-//     this.timerID = setInterval(() => this.setState({ date: new Date() }), 1000);
-//   }
+const App = () => {
+  //using state in component
+  const [currentSearch, setCurrentSearch] = useState("");
 
-//   componentDidUpdate() {
-//     console.log("this component updated");
-//   }
+  //this is callback function that gets called by its child search term component to update data in App component
+  const getSearchTermFromChildComponent = (searchTerm) => {
+    console.log("this page is rendered by" + " ", searchTerm);
+    setCurrentSearch(searchTerm);
+  };
 
-//   // tick = () => {
+  const openNotification = () => {
+    notification.open({
+      description: currentSearch,
+    });
+  };
 
-//   // };
+  useEffect(() => {
+    //fetch from api here, this function withh trigger everytime you change search term
+    currentSearch && openNotification();
+  }, [currentSearch]);
 
-//   render() {
-//     return (
-//       <div>
-//         <h1>Hello, world!</h1>
-//         <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
-//       </div>
-//     );
-//   }
-// }
-
-function App() {
-  return <h1>hello world</h1>;
-}
-
+  return (
+    <div>
+      <SearchComponent
+        componentName="SearchComponent"
+        getSearchTerm={getSearchTermFromChildComponent}
+      />
+      Current Searh term:
+      <h1>{currentSearch}</h1>
+    </div>
+  );
+};
 export default App;
