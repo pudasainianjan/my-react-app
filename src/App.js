@@ -1,37 +1,14 @@
-import { notification } from "antd";
-import { useEffect, useState } from "react";
-import SearchComponent from "./components/SearchComponent";
+import React, { useEffect } from "react";
+import "./App.css";
+import "antd/dist/reset.css";
+import Home from "./layout";
 
-const App = () => {
-  //using state in component
-  const [currentSearch, setCurrentSearch] = useState("");
-
-  //this is callback function that gets called by its child search term component to update data in App component
-  const getSearchTermFromChildComponent = (searchTerm) => {
-    console.log("this page is rendered by" + " ", searchTerm);
-    setCurrentSearch(searchTerm);
-  };
-
-  const openNotification = () => {
-    notification.open({
-      description: currentSearch,
-    });
-  };
-
+function App() {
   useEffect(() => {
-    //fetch from api here, this function withh trigger everytime you change search term
-    currentSearch && openNotification();
-  }, [currentSearch]);
+    console.log("app just rendered");
+  }, []);
 
-  return (
-    <div>
-      <SearchComponent
-        componentName="SearchComponent"
-        getSearchTerm={getSearchTermFromChildComponent}
-      />
-      Current Searh term:
-      <h1>{currentSearch}</h1>
-    </div>
-  );
-};
+  return <Home />;
+}
+
 export default App;

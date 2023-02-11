@@ -1,0 +1,14 @@
+.panel-box {
+  margin-bottom: 20px;
+  transition: all .2s ease-in-out;
+}
+
+.panel-box.shadow:hover {
+  transform: scale(1.040);
+  z-index: 100;
+}
+
+.ant-card-body ul{
+  padding-left: 0;
+  list-style-type: none;
+}

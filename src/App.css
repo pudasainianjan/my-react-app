@@ -1,5 +1,13 @@
+html{
+  scroll-behavior: smooth;
+}
+
 .App {
   text-align: center;
+}
+
+#root{
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .App-logo {
@@ -36,3 +44,85 @@
     transform: rotate(360deg);
   }
 }
+
+/* content layout css */
+.ant-layout-content{
+    margin: 5px 16px 0px !important;
+    overflow: initial;
+}
+
+.shadow {
+  -webkit-box-shadow: 3px 3px 5px 3px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 3px 5px 3px #ccc;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         3px 3px 5px 3px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+
+.logo .avatar-item img{
+    width: 100%;
+    height : 100%;
+    object-fit: contain;
+}
+
+.responsive{
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+
+.ant-card .ant-card-bordered .ant-card-contain-grid{
+  display: flex;
+  flex-direction: column;
+  width: 200px !important;
+}
+
+/* contents container */
+.site-layout-background{
+  overflow: auto ;
+}
+
+@media only screen and (max-width: 550px) {
+  .site-layout-background{
+      padding: 0 !important;
+      padding-top: 24px;
+  }     
+}
+
+.ant-table-title{
+  padding: 10px 10px;
+}
+
+.ant-table-cell{
+  cursor: pointer;
+}
+
+/* FOR SCROLLBAR */
+
+/* width */
+::-webkit-scrollbar  {
+  width: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover{
+  background: #555; 
+}
+
+.box{
+  box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, 0.2),
+    -8px -8px 18px 0 rgba(255, 255, 255, 0.55);
+}
+
+button:hover {
+  transform: scale(1.1); 
+}
+
+th{
+  font-weight: 900 !important;
+}
+
+

@@ -1,0 +1,7 @@
+.brand-logo img {
+  transition: transform 0.5s ease;
+}
+
+.brand-logo img:hover {
+  transform: rotate(90deg);
+}
