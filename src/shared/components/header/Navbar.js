@@ -27,7 +27,7 @@ const items = [
     </Link>
   ),
   getItem("My Projects", "proj", <DesktopOutlined />, [
-    getItem(<Link to="/showJoke">Jokes Fetching</Link>, "proj1"),
+    getItem(<Link to="/showMovies">Movies Fetching</Link>, "proj1"),
     getItem("Fetching Movies", "proj2"),
   ]),
   getItem("Contact", "sub2", <TeamOutlined />),

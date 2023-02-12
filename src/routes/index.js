@@ -6,6 +6,7 @@ import { Content } from "antd/lib/layout/layout";
 
 import Dashboard from "../dashboard";
 import ShowJoke from "../fetchJokes";
+import ShowMovie from "../fetchMovies";
 
 const SiteContent = () => {
   return (
@@ -25,16 +26,16 @@ const SiteContent = () => {
 
           <Route
             exact
-            path={"/showJoke"}
+            path={"/showMovies"}
             isAuthed={true}
-            element={<ShowJoke />}
+            element={<ShowMovie />}
           />
 
           <Route
             exact
-            path={"/showJoke/:personName"}
+            path={"/showMovies/:movieId"}
             isAuthed={true}
-            element={<ShowJoke />}
+            element={<ShowMovie />}
           />
 
           <Route path="*" element={NotFound} />
