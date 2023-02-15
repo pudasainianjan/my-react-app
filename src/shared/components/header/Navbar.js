@@ -6,8 +6,10 @@ import {
 } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import { Breadcrumb, Layout, Menu, theme, Avatar } from "antd";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./Navbar.css";
+import UiContext from "../../../contexts/UiContext";
+import ToggleDarkMode from "../../../components/toggleDarkMode";
 const { Header, Content, Footer, Sider } = Layout;
 function getItem(label, key, icon, children) {
   return {
@@ -39,6 +41,18 @@ const Navbar = () => {
     token: { colorBgContainer },
   } = theme.useToken();
 
+  const { isDarkMode, setDarkMode } = useContext(UiContext);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setDarkMode(true);
+    }, 5000);
+  }, []);
+
+  useEffect(() => {
+    console.log("is dark mode", isDarkMode);
+  }, [isDarkMode]);
+
   const LOGO = "/logo512.png";
 
   return (
@@ -61,11 +75,20 @@ const Navbar = () => {
           </div>
         </Link>
         <Menu
-          theme="dark"
+          theme={isDarkMode ? "dark" : "light"}
           defaultSelectedKeys={["1"]}
           mode="inline"
           items={items}
         />
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "2rem",
+          }}
+        >
+          <ToggleDarkMode />
+        </div>
       </Sider>
     </>
   );

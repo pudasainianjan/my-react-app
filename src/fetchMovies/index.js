@@ -10,14 +10,13 @@ const ShowMovie = () => {
   useEffect(() => {
     // const url = window.location.pathname.split("/");
     // const personName = url[2];
-
-    fetchNewMovie("movie", "game of")
-      .then((movieData) => {
-        setMovies(movieData);
-      })
-      .catch((err) => {
-        //in case if any error occurs during fetching you can update states here....
-      });
+    // fetchNewMovie("movie", "game of")
+    //   .then((movieData) => {
+    //     setMovies(movieData);
+    //   })
+    //   .catch((err) => {
+    //     //in case if any error occurs during fetching you can update states here....
+    //   });
   }, []);
 
   useEffect(() => {
