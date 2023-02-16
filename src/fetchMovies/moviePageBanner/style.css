@@ -1,0 +1,65 @@
+.movie-banner {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  flex-wrap: nowrap;
+  padding-left: 3rem;
+}
+
+.bannerBigText {
+  display: flex;
+  flex-wrap: nowrap;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 80px;
+  color: #ffffff;
+  max-width: 100%;
+  margin-bottom: 0;
+}
+
+.bannerMediumText {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  /* identical to box height */
+  color: #ffffff;
+  max-width: 100%;
+  float: left;
+  margin-bottom: 10px;
+}
+
+.bannerSmallText {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: #ffffff;
+  text-align: left;
+  max-width: 40%;
+}
+
+.movieBannerWatchButton {
+  background: #fa4776;
+  border-radius: 41px;
+  outline: none;
+  float: left;
+  margin-top: 1rem;
+  padding: 17px 20px 17px 20px;
+  border: none;
+}
+
+.movieBannerWatchButton text {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  /* identical to box height */
+
+  letter-spacing: 0.04em;
+
+  color: #ffffff;
+}

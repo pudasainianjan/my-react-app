@@ -1,0 +1,18 @@
+.movieDetailCardWrapper {
+  /* background: url(image.png); */
+  border-radius: 16px;
+  height: 90%;
+  min-width: 200px;
+  max-width: 200px;
+  background-color: red;
+  margin: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.movieDetailCardWrapper:hover {
+  transform: scale(1.07);
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}

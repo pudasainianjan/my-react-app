@@ -1,0 +1,41 @@
+.movies-page .movie-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movieTypeHeaderWrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.movieTypeHeader {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+.movieTypeHeader.noMargin {
+  margin-right: 0;
+}
+
+.movieTypeHeader:hover {
+  transform: scale(1.1);
+  transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.movieHeaderBrand {
+  height: 150px;
+  width: auto;
+}
+
+.movieHeaderBrand:hover {
+  transform: scale(1.6);
+  transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}

@@ -15,8 +15,7 @@ const SiteContent = () => {
       <div
         className="site-layout-background"
         style={{
-          marginTop: "20px",
-          padding: 24,
+          height: "100vh",
           textAlign: "center",
           justifyContent: "center",
         }}

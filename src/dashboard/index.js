@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Row, Col, Divider, Tag } from "antd";
-import PanelBox from "../shared/components/panelBox";
+import PanelBox from "../shared/components/PanelBox";
 import Title from "antd/lib/typography/Title";
 import {
   PayCircleOutlined,

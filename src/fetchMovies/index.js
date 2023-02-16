@@ -2,14 +2,18 @@ import React, { useState, useEffect } from "react";
 import { PageHeader, Tag, Row, Col, Spin } from "antd";
 import { message, Skeleton } from "antd";
 import Title from "antd/lib/typography/Title";
-import "./style.css";
 import { fetchNewMovie } from "./api";
+import { fakeMovieData } from "./fakeMovieData";
+import "./style.css";
+import MovieDetailCard from "./movieDetailCard/MovieDetailCard";
+import MoviePageHeader from "./moviePageHeader/MoviePageHeader";
+import MoviePageBanner from "./moviePageBanner/MoviePageBanner";
 
 const ShowMovie = () => {
-  const [movie, setMovies] = useState(null);
+  const [movies, setMovies] = useState([]);
   useEffect(() => {
-    // const url = window.location.pathname.split("/");
-    // const personName = url[2];
+    setMovies(fakeMovieData);
+
     // fetchNewMovie("movie", "game of")
     //   .then((movieData) => {
     //     setMovies(movieData);
@@ -20,15 +24,22 @@ const ShowMovie = () => {
   }, []);
 
   useEffect(() => {
-    console.log("data from api --->", movie);
-  }, [movie]);
+    console.log("data from api --->", movies[0]);
+  }, [movies]);
 
   //HELPER FUNCTIONS
 
   return (
-    <>
-      <h1>Show Movies</h1>
-    </>
+    <div className="movies-page">
+      <MoviePageHeader />
+      <MoviePageBanner />
+      <h1 className="popularMovies">Popular Movies</h1>
+      <div className="movieDetailsWrapper">
+        {movies.map((movie) => (
+          <MovieDetailCard movieDetail={movie} />
+        ))}
+      </div>
+    </div>
   );
 };
 

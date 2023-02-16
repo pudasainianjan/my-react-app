@@ -1,0 +1,42 @@
+.movies-page {
+  /* The image used */
+  background-image: url("../../public/images/moviePage/starWarsPoster.png");
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  padding-top: 0;
+}
+
+.movieDetailsWrapper {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden; /* Hide scrollbars */
+  align-items: center;
+  width: 80vw;
+  background: rgba(103, 101, 113, 0.34);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(10px);
+  /* Note: backdrop-filter has minimal browser support */
+  height: 350px;
+  border-radius: 24px;
+}
+
+.popularMovies {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  /* identical to box height */
+  color: #ffffff;
+  margin-top: 5rem;
+  margin-left: 15px;
+  text-align: left;
+}
